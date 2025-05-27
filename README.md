@@ -15,11 +15,10 @@ Installez les dépendances avec la commande suivante :
 
 pip install -r requirements.txt
 
-
 ## 🧠 Méthodologie
 
 - Feature engineering : moyennes mobiles, deltas, interactions, cumul des erreurs, etc.
-- Entraînement des modèles : LightGBM, CatBoost, Random Forest
+- Entraînement des modèles : LightGBM, XGBoost, Random Forest
 - Optimisation par RandomizedSearchCV
 - Validation croisée temporelle (TimeSeriesSplit)
 - Évaluation : F1-score, matrice de confusion, MAE, RMSE
@@ -28,7 +27,6 @@ pip install -r requirements.txt
 
 - Modèles de classification avec une précision supérieure à 95 %
 - Modèle de régression avec une MAE d’environ 0.37 jours
-- ROI estimé à plus de 1300 % sur 5 ans
 
 ## 👤 Auteur
 
@@ -57,7 +55,7 @@ Install dependencies with:
 ## 🧠 Methodology
 
 - Feature engineering: rolling averages, deltas, component interaction
-- Models: LightGBM, CatBoost, Random Forest
+- Models: LightGBM, XGBoost, Random Forest
 - Hyperparameter tuning via RandomizedSearchCV
 - TimeSeriesSplit cross-validation
 - Evaluation: F1-score, confusion matrix, MAE, RMSE
@@ -66,7 +64,6 @@ Install dependencies with:
 
 - Classification accuracy above 95%
 - Regression MAE ≈ 0.37 days
-- Estimated ROI: over 1300% in 5 years
 
 ## 👤 Author
 
