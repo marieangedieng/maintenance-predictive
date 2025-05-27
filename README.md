@@ -15,6 +15,8 @@ Installez les dépendances avec la commande suivante :
 
 pip install -r requirements.txt
 
+Dézipper le fichier dataset dans le même dossier que celui des notebooks.
+
 ## 🧠 Méthodologie
 
 - Feature engineering : moyennes mobiles, deltas, interactions, cumul des erreurs, etc.
@@ -51,6 +53,9 @@ This project aims to develop AI models for predictive maintenance using sensor a
 Ensure you use Python 3.10+.  
 Install dependencies with:
 
+pip install -r requirements.txt
+
+Unzip the dataset file in the same directory
 
 ## 🧠 Methodology
 
