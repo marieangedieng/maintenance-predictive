@@ -17,6 +17,13 @@ pip install -r requirements.txt
 
 Dézipper le fichier dataset dans le même dossier que celui des notebooks.
 
+## Liens utiles
+
+[Dataset Original sur Kaggle](https://www.kaggle.com/datasets/arnabbiswas1/microsoft-azure-predictive-maintenance)
+[Table pour la classification binaire sur Kaggle](https://kaggle.com/datasets/ba9e1192415452c929a2267d73cb2c45e1fdd2395f67253082a2066335c37d13)
+[Table pour la classification multi-classe sur Kaggle](https://kaggle.com/datasets/1beb7bff38a64fb295cc01f86f211eff5e2f7b7440390559b75d544af7ff2be3)
+[Table pour la régression sur Kaggle](https://kaggle.com/datasets/1beb7bff38a64fb295cc01f86f211eff5e2f7b7440390559b75d544af7ff2be3)
+
 ## 🧠 Méthodologie
 
 - Feature engineering : moyennes mobiles, deltas, interactions, cumul des erreurs, etc.
