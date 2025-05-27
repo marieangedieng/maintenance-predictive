@@ -1,111 +1,74 @@
-🇫🇷 README – Maintenance Prédictive avec l’Intelligence Artificielle
-🎯 Objectif du projet
-Ce projet a pour but de mettre en œuvre des modèles de maintenance prédictive à l’aide de l’intelligence artificielle. À partir de données industrielles simulées, nous cherchons à :
+# Maintenance Prédictive avec l’Intelligence Artificielle
 
-Prédire si une machine tombera en panne dans les 14 prochains jours.
+## 🎯 Objectif du projet
 
-Identifier quel composant est susceptible d'être en cause.
+Ce projet a pour but de développer des modèles de maintenance prédictive à l’aide de l’intelligence artificielle. À partir de données issues de capteurs et d’historiques de maintenance, le projet vise à :
 
-Estimer le nombre de jours restants avant cette panne.
+1. Prédire si une machine tombera en panne dans les 14 prochains jours.
+2. Identifier le composant susceptible d’être à l’origine de la panne.
+3. Estimer le nombre de jours restants avant cette panne.
 
-📁 Structure du dépôt
-/
-├── 1_data_cleaning.ipynb              # Nettoyage et création des features
-├── 2_prediction_panne_14d.ipynb       # Modélisation classification binaire (panne ou non)
-├── 3_prediction-composant-panne.ipynb # Modélisation classification multi-classes (composant)
-├── 4_prediction-tbf.ipynb             # Modélisation régression (temps avant panne)
-├── requirements.txt                   # Bibliothèques Python nécessaires
-├── dataset/
-│   ├── PdM_telemetry.csv
-│   ├── PdM_errors.csv
-│   ├── PdM_maint.csv
-│   ├── PdM_failures.csv
-│   ├── PdM_machines.csv
-│   └── dataset_cleaned/
-│       ├── df_machine_failure.csv     # Pour modèle 1
-│       ├── df_comp_failure.csv        # Pour modèle 2
-│       ├── df_time_failure.csv        # Pour modèle 3
+## ⚙️ Installation
 
-⚙️ Prérequis
-Python 3.10+
-
-Jupyter Notebook
-
-Scikit-learn, LightGBM, XGBoost, Pandas, Numpy, etc.
-
-Installez les dépendances avec :
+Assurez-vous d’utiliser Python 3.10+.  
+Installez les dépendances avec la commande suivante :
 
 pip install -r requirements.txt
 
-🧠 Méthodologie
-Feature engineering (variables dérivées, moyennes mobiles, deltas, etc.)
 
-Entraînement des modèles avec optimisation d’hyperparamètres via RandomizedSearchCV
+## 🧠 Méthodologie
 
-Évaluation : F1-score, matrice de confusion, MAE/RMSE (régression)
+- Feature engineering : moyennes mobiles, deltas, interactions, cumul des erreurs, etc.
+- Entraînement des modèles : LightGBM, CatBoost, Random Forest
+- Optimisation par RandomizedSearchCV
+- Validation croisée temporelle (TimeSeriesSplit)
+- Évaluation : F1-score, matrice de confusion, MAE, RMSE
 
-📊 Résultats
-Précision des modèles de classification supérieure à 95 % avec LightGBM & XGBoost
+## 📊 Résultats
 
-Estimation du temps avant panne avec MAE ≈ 0.37 jours
+- Modèles de classification avec une précision supérieure à 95 %
+- Modèle de régression avec une MAE d’environ 0.37 jours
+- ROI estimé à plus de 1300 % sur 5 ans
 
-🔍 Auteur
-Projet réalisé par Marie-Ange Dieng, étudiante en Intelligence Artificielle.
-Encadré dans le cadre d’un projet académique sur le développement durable.
+## 👤 Auteur
+
+Projet réalisé par Marie-Ange Dieng, étudiante en Intelligence Artificielle,  
+dans le cadre d’un projet académique sur le développement durable.
+
+---
+
+# Predictive Maintenance with Artificial Intelligence (EN)
+
+## 🎯 Project Goal
+
+This project aims to develop AI models for predictive maintenance using sensor and maintenance data. The objectives are:
+
+1. Predict if a machine will fail in the next 14 days.
+2. Identify which component is likely to fail.
+3. Estimate how many days remain before the failure occurs.
 
 
-🇬🇧 README – Predictive Maintenance with Artificial Intelligence
-🎯 Project Goal
-This project implements predictive maintenance models using artificial intelligence. From industrial time series data, the goal is to:
+## ⚙️ Installation
 
-Predict whether a machine will fail within the next 14 days.
-
-Identify which component will likely fail.
-
-Estimate how many days remain before the failure.
-
-📁 Repository Structure
-
-/
-├── 1_data_cleaning.ipynb              # Data cleaning and feature creation
-├── 2_prediction_panne_14d.ipynb       # Binary classification model (failure or not)
-├── 3_prediction-composant-panne.ipynb # Multi-class classification model (component)
-├── 4_prediction-tbf.ipynb             # Regression model (time before failure)
-├── requirements.txt                   # Required Python packages
-├── dataset/
-│   ├── PdM_telemetry.csv
-│   ├── PdM_errors.csv
-│   ├── PdM_maint.csv
-│   ├── PdM_failures.csv
-│   ├── PdM_machines.csv
-│   └── dataset_cleaned/
-│       ├── df_machine_failure.csv     # Used for model 1
-│       ├── df_comp_failure.csv        # Used for model 2
-│       ├── df_time_failure.csv        # Used for model 3
-
-⚙️ Requirements
-Python 3.10+
-
-Jupyter Notebook
-
-Scikit-learn, LightGBM, CatBoost, Pandas, Numpy, etc.
-
+Ensure you use Python 3.10+.  
 Install dependencies with:
 
-pip install -r requirements.txt
 
-🧠 Methodology
-Advanced feature engineering (rolling windows, deltas, aggregations)
+## 🧠 Methodology
 
-Model training with RandomizedSearchCV hyperparameter tuning
+- Feature engineering: rolling averages, deltas, component interaction
+- Models: LightGBM, CatBoost, Random Forest
+- Hyperparameter tuning via RandomizedSearchCV
+- TimeSeriesSplit cross-validation
+- Evaluation: F1-score, confusion matrix, MAE, RMSE
 
-Evaluation metrics: F1-score, confusion matrix, MAE/RMSE (for regression)
+## 📊 Results
 
-📊 Results
-Classification models achieve over 95% accuracy
+- Classification accuracy above 95%
+- Regression MAE ≈ 0.37 days
+- Estimated ROI: over 1300% in 5 years
 
-Failure time regression with MAE ≈ 0.37 days
+## 👤 Author
 
-🔍 Author
-Project developed by Marie-Ange Dieng, Artificial Intelligence student.
-This work is part of an academic initiative focused on sustainable development.
+Project developed by Marie-Ange Dieng, Artificial Intelligence student,  
+as part of an academic project on sustainability.
